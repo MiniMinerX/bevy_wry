@@ -40,7 +40,7 @@ fn main() {
         .add_plugins(DefaultPlugins)
         .add_plugins(BevyWryPlugin::new(init_bevy_wry))
         .add_systems(Startup, setup)
-        .observe(in_commands)
+        .add_observer(in_commands)
         .run();
 }
 

@@ -34,7 +34,7 @@ impl BevyWryPlugin {
     }
 
     pub fn reqister_out_webview_event<E: OutWryEvent>(app: &mut App) {
-        app.add_event::<E>().observe(out_events::<E>);
+        app.add_event::<E>().add_observer(out_events::<E>);
     }
 }
 
